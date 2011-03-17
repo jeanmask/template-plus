@@ -30,7 +30,7 @@ abstract class Plus_Controller_Template extends Controller {
             
             foreach(array_merge($this->default_style, $this->style) as $style) {
                 if(!array_key_exists('media', $style)) {
-                  $script['media'] = self::$default_style_media;
+                  $style['media'] = self::$default_style_media;
                 }
 
                 $before[] = html::style($style['src'], array('media' => $style['media']) );
